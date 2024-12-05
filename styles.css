@@ -1,0 +1,264 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Trebuchet', sans-serif; /* A modern serif font for readability */
+    line-height: 1.7;
+    background-color: #f4f4f9; /* Softer off-white for readability */
+    color: #2c3e50; /* Dark gray-blue for professional tone */
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: #005082; /* Refined blue tone */
+    color: #ffffff; /* White text for contrast */
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Main Content */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ffffff; /* Clean white for the content box */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 25px;
+}
+
+h2 {
+    margin-bottom: 10px;
+    color: #0078AA; /* Refined blue for headings */
+    font-size: 1.6rem;
+    border-bottom: 2px solid #005082; /* Underline to add structure */
+    padding-bottom: 5px;
+}
+
+p {
+    margin-bottom: 15px;
+    text-indent: 20px;
+    font-size: 1.1rem;
+    color: #4a4a4a;
+}
+
+.unindented { /* unindented p */
+    margin-bottom: 15px;
+    text-indent: 0px;
+    font-size: 1.1rem;
+    color: #4a4a4a;
+
+}
+
+/* Enhanced Navigation Bar */
+nav {
+    width: 100%;
+    background-color: #003F63; /* Deep blue background */
+    display: flex;
+    justify-content: center;
+    padding: 1.2rem; /* Increased padding for better spacing */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    font-family: 'Trebuchet', sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 1.5rem 15px; /* More padding for larger clickable area */
+    border-radius: 5px;
+    font-size: 1.1rem; /* Slightly larger font size */
+    font-weight: 500; /* Medium font weight for better readability */
+    transition: all 0.3s ease; /* Smooth hover transition */
+    letter-spacing: 0.5px; /* Slight letter spacing for a professional touch */
+}
+
+nav ul li a:hover {
+    background-color: #0078AA; /* Lighter blue on hover */
+    color: #f4f4f9; /* Subtle contrast */
+    box-shadow: 0 4px 8px rgba(0, 120, 170, 0.3); /* Slight shadow on hover */
+    
+}
+
+
+/* Dropdown menu */
+nav ul li {
+    position: relative;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #003F63; /* Matches the nav bar */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+    width: 100%; /* Set width equal to the parent li */
+    margin-top: 17.5px;
+}
+
+nav ul li ul li {
+    width: 100%; /* Ensure sub-items also take the full width */
+}
+
+nav ul li ul li a {
+    padding: 0.5rem 1rem;
+    display: block;
+    font-size: 0.9rem;
+    color: #ffffff; /* Matches the nav bar */
+}
+
+nav ul li ul li a:hover {
+    background-color: #0078AA; /* Lighter blue on hover */
+}
+
+nav ul li:hover ul {
+    display: block; /* Show the dropdown when hovering */
+}
+
+
+.quote {
+    margin: 25px auto; /* Center the quote with consistent spacing */
+    padding: 20px 20px 15px 25px; /* Comfortable padding with emphasis on left side */
+    border-left: 5px solid #0078AA; /* Matches refined blue tone of the site */
+    background-color: #f8fafc; /* Softer off-white background for readability */
+    font-style: italic;
+    color: #2c3e50; /* Matches main text color for consistency */
+    width: 85%; /* Slightly wider for balance with the content */
+    border-radius: 8px; /* Smooth edges for a polished look */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    font-size: 1.1rem; /* Enhanced readability */
+    line-height: 1.8; /* Comfortable line spacing */
+}
+
+.reference {
+    text-align: right; /* Align reference to the right */
+    margin-right: 62.5px;
+    font-size: 0.9rem; /* Slightly smaller size for secondary emphasis */
+    color: #4a4a4a; /* Softer gray for subtlety */
+    margin-top: 10px; /* Spacing above the reference */
+    font-style: normal; /* Keep reference text plain for contrast with italicized quote */
+    margin-bottom: 20px;
+}
+
+.picture-container {
+    margin: 20px auto;
+    text-align: center; /* Centers the text within the caption */
+
+}
+
+.picture {
+    display: block;
+    margin: 0 auto; /* Centers the image */
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    border: 3px solid #0078AA;
+}
+
+.caption {
+    text-indent: 0px;
+    display: block; /* Ensures the caption is treated as a block element */
+    margin: 10px auto; /* Centers the caption horizontally */
+    max-width: 90%;
+    font-size: 0.95rem;
+    color: #4a4a4a; /* Matches paragraph text color */
+    font-style: italic; /* Adds emphasis to the caption */
+    line-height: 1.5;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #7a7a7a;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+    margin-bottom: 0px;
+    text-indent: 0px;
+
+}
+
+/* Footer Navigation */
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px; /* Adjust the gap as needed */
+    text-indent: 0px;
+
+}
+
+.footer-container p {
+    margin: 0;
+    text-indent: 0px;
+
+}
+
+.footer-container a {
+    color: #ffffff;
+    background-color: #005082; /* Matches navigation bar style */
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    text-indent: 0px;
+
+}
+
+.footer-container a:hover {
+    background-color: #0078AA; /* Hover color for buttons */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    text-indent: 0px;
+
+}
+
+/* Hanging Indent */
+.hanging-indent {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #4a4a4a;
+    text-indent: -20px; /* Negative indent for hanging lines */
+    padding-left: 20px; /* Add space for the first line */
+    line-height: 1.7; /* Maintain comfortable line spacing */
+}

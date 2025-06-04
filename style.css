@@ -1,0 +1,129 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.8em;
+}
+
+#header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+#weather-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  margin-right: 270px;
+}
+
+#weather {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0;
+}
+
+#weather-image {
+  width: 100px;
+  height: auto;
+  margin-top: 5px;
+}
+
+#weather-effect {
+  font-size: 0.9em;
+  text-align: center;
+  max-width: 180px;
+  margin-top: 5px;
+}
+
+#input-panel {
+  margin-top: -180px;
+  margin-bottom: 125px;
+}
+
+#status {
+  font-weight: bold;
+  margin-top: -100px;
+}
+
+#hint,
+#score {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+#main-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+canvas {
+  max-width: 100%;
+}
+
+#debug-panel {
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 400px;
+  white-space: pre-wrap;
+  font-family: monospace;
+  align-self: center;
+  box-sizing: border-box;
+}
+
+.modal {
+  display: block;
+  position: fixed;
+  z-index: 999;
+  padding-top: 80px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+}
+
+details > summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+details[open] > *:not(summary) {
+  padding-left: 50px; /* or more for deeper indentation */
+}

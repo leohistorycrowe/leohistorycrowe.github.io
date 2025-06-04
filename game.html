@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donut Shop Equilibrium Game</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div id="header-container">
+    <h1>Donut Supply and Demand Challenge</h1>
+    <div id="weather-container">
+      <p id="weather"></p>
+      <img id="weather-image" src="" alt="Weather Image" />
+      <p id="weather-effect"></p>
+    </div>
+  </div>
+
+  <div id="explanationModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">×</span>
+      <h2>Welcome to Your Donut Shop!</h2>
+      <p>You're a donut shop owner. Each morning, you must decide how many donuts to make.</p>
+      <ul>
+        <li>Too many? Donuts go to waste. This is called <strong>surplus</strong>. 🍩💸</li>
+        <li>Too few? You miss out on hungry customers. This is called <strong>shortage</strong>. 😟</li>
+        <li>Your goal: Match donut supply with customer demand to achieve <strong>market equilibrium</strong>.</li>
+        <li>Watch out for the weather. It's a real-world example of how <strong>tastes and preferences</strong> can shift the demand curve left or right.</li>
+        <li>When supply and demand aren't balanced, you're in a state of <strong>disequilibrium</strong>. Adjust your supply based on the weather to reach the sweet spot!</li>
+        <li>Guess the right amount of donuts in the fewest number of days!</li>
+    </ul>
+    </div>
+  </div>
+
+  <div id="input-panel">
+    <label for="quantity">How many donuts will you make today? </label>
+    <input type="number" id="quantity" step="1" min="0" placeholder="Enter quantity" />
+    <button onclick="testQuantity()">Bake Donuts</button>
+    <button onclick="resetGame()" id="resetBtn" style="display:none;">Play Again</button>
+  </div>
+
+  <p id="status"></p>
+  <p id="hint"></p>
+  <canvas id="surplusChart" width="400" height="150"></canvas>
+  <p id="score"></p>
+
+  <div id="main-container">
+    <div>
+      <canvas id="gameChart" width="800" height="400"></canvas>
+    </div>
+    <div id="debug-panel">
+      <h3>Show Concepts</h3>
+      <label><input type="checkbox" id="toggleSupply" onchange="updateDebugGraph()" /> Show Full Supply Curve</label><br />
+      <label><input type="checkbox" id="toggleDemand" onchange="updateDebugGraph()" /> Show Full Demand Curve</label><br />
+      <label><input type="checkbox" id="toggleEquilibrium" onchange="updateDebugGraph()" /> Show Market Equilibrium</label>
+      <p id="debug-info"></p>
+    </div>
+  </div>
+
+  <details style="margin-top: 20px;">
+  <summary>What is Market Equilibrium?</summary>
+  <ul>
+    <li><strong>Market equilibrium</strong> is the point where the quantity of donuts supplied <strong>equals</strong> the quantity demanded.</li>
+    <li>At equilibrium, the price is stable and there are no surpluses or shortages.</li>
+    <li>Any situation where price is not at equilibrium is called <strong>disequilibrium</strong>.</li>
+  </ul>
+</details>
+
+<details style="margin-top: 20px;">
+  <summary>Change in Demand vs. Change in Quantity Demanded</summary>
+  <ul>
+    <li><strong>Change in Quantity Demanded</strong> happens when the price changes, moving along the demand curve.</li>
+    <li><strong>Change in Demand</strong> happens when a non-price factor (like weather) affects demand, shifting the entire demand curve.</li>
+    <li>Examples of changes in demand:
+      <ul>
+        <li><strong>Sunny Days:</strong> More demand → curve shifts right.</li>
+        <li><strong>Rainy Days:</strong> Less demand → curve shifts left.</li>
+      </ul>
+    </li>
+    <li>Weather is a change in <strong>tastes and preferences</strong>, one of the five key demand shifters.</li>
+  </ul>
+</details>
+<script src="script.js"></script>
+</body>
+</html>

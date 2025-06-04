@@ -81,7 +81,10 @@ function applyWeatherEffect() {
 }
 
 document.getElementById('quantity').addEventListener('keydown', function(event) {
-  if (event.key === 'Enter') testQuantity();
+  if (event.key === 'Enter') {
+    testQuantity();
+    this.value = '';
+  }
 });
 
 let day = 1;

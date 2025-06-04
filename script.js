@@ -210,7 +210,7 @@ function testQuantity() {
   updateChartBounds();
   gameChart.update();
   day++;
-  input.value = '';
+  document.getElementById("quantity").value = '';
 }
 
 function updateDebugGraph() {
